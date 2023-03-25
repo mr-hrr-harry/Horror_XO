@@ -78,9 +78,18 @@ body > *{
     border-collapse: collapse;
 }
 #box td{
-    padding: 80px;
+    padding: 10px;
+    height: 140px;
+    width: 140px;
     background: #000;
     border: 3px solid #fff;
+    color: #fff;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.xAttr{
+    color: #f40000;
 }
 
 /* Footer */
