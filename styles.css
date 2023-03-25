@@ -78,9 +78,9 @@ body > *{
     border-collapse: collapse;
 }
 #box td{
-    padding: 65px;
+    padding: 80px;
     background: #000;
-    border: 3px  ridge #fff;
+    border: 3px solid #fff;
 }
 
 /* Footer */
