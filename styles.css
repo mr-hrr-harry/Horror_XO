@@ -88,12 +88,10 @@ body > *{
     font-weight: bolder;
 }
 
-td.xAttr{
-    color: #f40000;
-}
-
-#turn{
-    color: #f40000;
+#mssg{
+    font-size: 30px;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: #e4e4e4;
 }
 
 #notator{
@@ -103,6 +101,7 @@ td.xAttr{
     display: inline-block;
     position: relative;
 
+    color: #fff;
     border: 3px solid #000;
     border-radius: 30px;
     background: linear-gradient(135deg, #CA2A2A, #FFFF00);
@@ -121,13 +120,28 @@ td.xAttr{
 }
 
 #refresh{
-    padding: 20px;
-    margin-left: 30px;
+    padding: 5px;
+    margin: 30px;
+    height: 30px;
+    width: 30px;
     display: inline-block;
+
+    box-shadow: 0 0 10px #000;
+    border-radius: 50%;
     
-    font-size: 20px;
+    font-size: 30px;
     font: 600;
+
     cursor: pointer;
+    transition: 0.5s ease-out;
+}
+#refresh:hover{
+    transform: scale(1.001);
+    color: #fff;
+    box-shadow: 0 0 15px #000;
+
+    background:  linear-gradient(45deg, #FFFF00, #CA2A2A);
+    rotate: 90deg;
 }
 
 /* Footer */
