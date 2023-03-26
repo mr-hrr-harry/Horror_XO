@@ -14,7 +14,8 @@
     </header>
 
     <Section id="main">
-         <table id="box">
+        <div id="tableSec" hidden>
+            <table id="box">
                 <tr>
                     <td onclick="xORo(event)" id="00"></td>
                     <td onclick="xORo(event)" id="01"></td>
@@ -30,12 +31,17 @@
                     <td onclick="xORo(event)" id="21"></td>
                     <td onclick="xORo(event)" id="22"></td>
                 </tr>
-         </table>
+            </table>
+        </div> 
+        <p id="notator" onclick="start()">
+        Start
+        <span id="turn"></span>
+        </p>
+
     </Section>
     
     <footer id="ftr">
-        <p> - - Devel
-            oped by Horror - -     </p>
+        <p> - - Developed by Horror - -     </p>
     </footer>
 
     <script src="script.js"></script>
