@@ -1,13 +1,16 @@
-
-let str = document.getElementById("tableSec");
+let tblSec = document.getElementById("tableSec");
 function start(){
-    str.removeAttribute("hidden");
+    tblSec.removeAttribute("hidden");
+    document.getElementById("refresh").removeAttribute("style");
     notor.removeAttribute("onclick");
     notor.innerHTML="Player turn";
     turn.textContent="X";
     return;
 }
 
+function reload(){
+    location.reload();
+}
 
 let mat=[[0,0,0],
          [0,0,0],
@@ -16,6 +19,8 @@ var flag=0, ctr=0;
 
 const notor = document.getElementById("notator");
 const turn = document.getElementById("turn");
+var end=0;
+
 function xORo(event){
 
 
@@ -28,7 +33,6 @@ function xORo(event){
 
     if(cell.innerHTML==""){
         if(flag==0){
-            cell.classList.add("xAttr");
             flag=1;
             ctr++;
             cell.innerHTML="X";
@@ -36,7 +40,6 @@ function xORo(event){
             turn.innerHTML="O's";
         }
         else{
-            cell.classList.add("oAttr");
             flag=0;
             ctr++;
             cell.innerHTML="O";
@@ -45,7 +48,7 @@ function xORo(event){
         }
     }
     else{
-        alert("Fill on empty boxes");
+        alert("You cant replace the filled boxes!");
         return;
     }
 
@@ -62,8 +65,8 @@ function xORo(event){
     }
 
     if(ctr==9){
-        alert("Oops! Match Draw 👻");
-        prompt("Do you like this game ?");
+        notor.innerHTML="Oops Match Draw!";
+        
     }
 
     console.log(mat);

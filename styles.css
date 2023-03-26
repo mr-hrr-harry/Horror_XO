@@ -97,10 +97,11 @@ td.xAttr{
 }
 
 #notator{
-    padding: 20px;;
-    margin-top: 30px;
+    padding: 20px;
+    margin: 30px 10px;
     min-width: 100px;
     display: inline-block;
+    position: relative;
 
     border: 3px solid #000;
     border-radius: 30px;
@@ -112,12 +113,21 @@ td.xAttr{
     transition: 0.3s ease-out;
     cursor: pointer;
 }
-#notator:hover{
-    margin-top: none;
-    transform: scale(1.001);
-    background: linear-gradient(135deg, #FFFF00, #CA2A2A);
+#notator:hover{ 
+    transform: scale(1.01);
+    background: linear-gradient(45deg, #FFFF00, #CA2A2A);
     box-shadow: 0 0 10px #000;
     font-size: 21px;
+}
+
+#refresh{
+    padding: 20px;
+    margin-left: 30px;
+    display: inline-block;
+    
+    font-size: 20px;
+    font: 600;
+    cursor: pointer;
 }
 
 /* Footer */
