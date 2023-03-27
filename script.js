@@ -116,7 +116,16 @@ function xORo(event){
 
 function setFinalRes(){
     notor.onclick = reload;
-    notor.setAttribute("style","font: 800;font-size: 32px;-webkit-text-stroke-width: 1.5px;-webkit-text-stroke-color: #000;-webkit-text-fill-color: #22ff00;");
+    notor.setAttribute("style",
+        "font: 800;"+
+        "font-size: 32px;"+
+        "-webkit-text-stroke-width: 1.5px;"+
+        "-webkit-text-stroke-color: #000;"+
+        "-webkit-text-fill-color: #22ff00;"+
+        "animation-name: zoomIn"+
+        "animation-duration: 10s"+
+        "animation-iteration-count: infinite");
+
     new Audio("winning_trumpets.mpeg").play();
     new Audio("winning_applasue.mpeg").play();
     win=1;
