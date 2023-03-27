@@ -91,12 +91,13 @@ body > *{
 #mssg{
     font-size: 30px;
     -webkit-text-stroke: 1px #fff;
-    -webkit-text-fill-color: #e4e4e4;
+    -webkit-text-fill-color: #ababab;
 }
 
 #notator{
     padding: 20px;
     margin: 30px 10px;
+    min-height: 25px;
     min-width: 100px;
     display: inline-block;
     position: relative;
@@ -143,6 +144,7 @@ body > *{
     background:  linear-gradient(45deg, #FFFF00, #CA2A2A);
     rotate: 90deg;
 }
+
 
 /* Footer */
 #ftr{

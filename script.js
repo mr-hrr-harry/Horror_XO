@@ -1,6 +1,10 @@
 let mssg;
 let tblSec = document.getElementById("tableSec");
+const buttonClick = new Audio("button_click_pop.mpeg");
+
 function start(){
+
+    buttonClick.play();
     tblSec.removeAttribute("hidden");
     document.getElementById("refresh").removeAttribute("style");
 
@@ -16,6 +20,7 @@ function start(){
 
 
 function reload(){
+    buttonClick.play();
     location.reload();
 }
 
@@ -24,10 +29,16 @@ let mat=[["","",""],
          ["","",""],
          ["","",""]];
 
-var flag=0, ctr=0;
+var flag=0, ctr=0, win=0;
 const notor = document.getElementById("notator");
+const alertSound = new Audio("warning_sound.mpeg");
 
 function xORo(event){
+
+    if(win==1){
+        alert();
+    }
+
 
     let cellId = event.target.id;
     console.log(cellId);
@@ -57,32 +68,33 @@ function xORo(event){
         for(i=0; i<3; i++){
             if(mat[i][0]!="" && mat[i][0]==mat[i][1] && mat[i][0]==mat[i][2]){
                 notor.innerText=mat[i][0] + " wins";
-                notor.onclick = reload;
+                setFinalRes();
                 return;
             }
         }
         for(j=0; j<3; j++){
             if(mat[0][j]!="" && mat[0][j]==mat[1][j] && mat[0][j]==mat[2][j]){
                 notor.innerHTML=mat[0][j]+" wins";
-                notor.onclick = reload;
+                setFinalRes();
                 return;
             }
         }
 
         if(mat[0][0]!="" && mat[0][0]==mat[1][1] && mat[0][0]==mat[2][2]){
             notor.innerHTML = mat[0][0]+" wins";
-            notor.onclick = reload;
+            setFinalRes();
             return;
         }
 
         if(mat[0][2]!="" && mat[0][2]==mat[1][1] && mat[0][2]==mat[2][0]){
-            mssg.innerHTML = mat[0][2]+" wins";
-            notor.onclick = reload;
+            notor.innerHTML = mat[0][2]+" wins";
+            setFinalRes();
             return;
         }
         
     }
     else{
+        alertSound.play();
         alert("You can't replace the filled boxes!");
         return;
     }
@@ -93,9 +105,19 @@ function xORo(event){
 
     if(ctr==9){
         notor.innerHTML="🤧 Oops Match Draw! Start Over";
-        // mssg.innerHTML="";
+        new Audio("failure_sound.mpeg").play() ; 
+
         notor.onclick = reload;
     }
 
     console.log(mat);
+}
+
+function setFinalRes(){
+    notor.onclick = reload;
+    notor.setAttribute("style","font: 800;font-size: 32px;-webkit-text-stroke-width: 1.5px;-webkit-text-stroke-color: #000;-webkit-text-fill-color: #22ff00;");
+    new Audio("winning_trumpets.mpeg").play();
+    new Audio("winning_applasue.mpeg").play();
+    win=1;
+    return;
 }
