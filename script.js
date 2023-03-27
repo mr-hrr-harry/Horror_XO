@@ -41,7 +41,7 @@ function xORo(event){
             flag=1;
             ctr++;
             cell.innerHTML="X";
-            mat[row][col]"X";
+            mat[row][col]="X";
             mssg.innerHTML="O";
             cell.setAttribute("style", "color:#CA2A2A");
         }
@@ -54,7 +54,32 @@ function xORo(event){
             cell.setAttribute("style", "color:#FFFF00");
         }
 
+        for(i=0; i<3; i++){
+            if(mat[i][0]!="" && mat[i][0]==mat[i][1] && mat[i][0]==mat[i][2]){
+                notor.innerText=mat[i][0] + " wins";
+                notor.onclick = reload;
+                return;
+            }
+        }
+        for(j=0; j<3; j++){
+            if(mat[0][j]!="" && mat[0][j]==mat[1][j] && mat[0][j]==mat[2][j]){
+                notor.innerHTML=mat[0][j]+" wins";
+                notor.onclick = reload;
+                return;
+            }
+        }
 
+        if(mat[0][0]!="" && mat[0][0]==mat[1][1] && mat[0][0]==mat[2][2]){
+            notor.innerHTML = mat[0][0]+" wins";
+            notor.onclick = reload;
+            return;
+        }
+
+        if(mat[0][2]!="" && mat[0][2]==mat[1][1] && mat[0][2]==mat[2][0]){
+            mssg.innerHTML = mat[0][2]+" wins";
+            notor.onclick = reload;
+            return;
+        }
         
     }
     else{
@@ -68,7 +93,7 @@ function xORo(event){
 
     if(ctr==9){
         notor.innerHTML="🤧 Oops Match Draw! Start Over";
-        mssg.innerHTML="";
+        // mssg.innerHTML="";
         notor.onclick = reload;
     }
 
