@@ -90,8 +90,9 @@ body > *{
 
 #mssg{
     font-size: 30px;
-    -webkit-text-stroke: 1px #fff;
-    -webkit-text-fill-color: #ababab;
+    -webkit-text-stroke: 1px #000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: #ffffff;
 }
 
 #notator{

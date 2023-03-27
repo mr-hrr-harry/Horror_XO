@@ -36,7 +36,8 @@ const alertSound = new Audio("warning_sound.mpeg");
 function xORo(event){
 
     if(win==1){
-        alert();
+        alert("Match already over! Start again");
+        return;
     }
 
 
@@ -121,3 +122,4 @@ function setFinalRes(){
     win=1;
     return;
 }
+ 
