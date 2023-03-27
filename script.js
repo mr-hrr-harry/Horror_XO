@@ -54,6 +54,11 @@ function xORo(event){
             cell.setAttribute("style", "color:#FFFF00");
         }
 
+        for(i=0; i<3; i++){
+            if(mat[i][0]!=="" && mat[i][0]==mat[i][1] && mat[i][0]===mat[i][2]){
+                
+            }
+        }
         
         
     }
