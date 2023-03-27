@@ -20,10 +20,10 @@ function reload(){
 }
 
 
+let mat=[["","",""],
+         ["","",""],
+         ["","",""]];
 
-let mat=[[0,0,0],
-         [0,0,0],
-         [0,0,0]];
 var flag=0, ctr=0;
 const notor = document.getElementById("notator");
 
@@ -41,7 +41,7 @@ function xORo(event){
             flag=1;
             ctr++;
             cell.innerHTML="X";
-            mat[row][col]=1;
+            mat[row][col]"X";
             mssg.innerHTML="O";
             cell.setAttribute("style", "color:#CA2A2A");
         }
@@ -49,119 +49,13 @@ function xORo(event){
             flag=0;
             ctr++;
             cell.innerHTML="O";
-            mat[row][col]=2;
+            mat[row][col]="O";
             mssg.innerHTML="X";
             cell.setAttribute("style", "color:#FFFF00");
         }
 
-
-        if(row==0 && col==0){
-            if(mat[0][0]===mat[0][1]===mat[0][2]
-                || mat[0][0]===mat[1][1]===mat[2][2]
-                    || mat[0][0]===mat[1][0]===mat[2][0]){
-                        if(mat[0][0]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[0][0]==2){
-                            notor.innerHTML="O wins";
-                            
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==0 && col==1){
-            if(mat[0][0]===mat[0][1]===mat[0][2]
-                || mat[0][1]===mat[1][1]===mat[2][1]){
-                        if(mat[0][1]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[0][1]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==0 && col==2){
-            if(mat[0][0]===mat[0][1]===mat[0][2]
-                || mat[0][2]===mat[1][1]===mat[2][0]
-                    || mat[0][2]===mat[1][2]===mat[2][2]){
-                        if(mat[0][2]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[0][2]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==1 && col==0){
-            if(mat[0][0]===mat[1][0]===mat[2][0]
-                || mat[1][0]===mat[1][1]===mat[1][2]){
-                        if(mat[1][0]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[1][0]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==1 && col==1){
-            if(mat[0][0]===mat[1][1]===mat[2][2]
-                || mat[0][1]===mat[1][1]===mat[2][1]
-                    ||mat[0][2]===mat[1][1]===mat[2][0]
-                        || mat[1][0]===mat[1][1]===mat[1][2]){
-                        if(mat[1][1]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[1][1]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==1 && col==2){
-            if(mat[0][2]===mat[1][2]===mat[2][2]
-                || mat[1][0]===mat[1][1]===mat[1][2]){
-                        if(mat[0][0]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[1][2]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==2 && col==0){
-            if(mat[0][0]===mat[1][0]===mat[2][0]
-                || mat[2][0]===mat[1][1]===mat[0][2]
-                    || mat[2][0]===mat[2][1]===mat[2][2]){
-                        if(mat[0][0]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[2][0]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==2 && col==1){
-            if(mat[2][0]===mat[2][1]===mat[2][2]
-                || mat[0][1]===mat[1][1]===mat[2][1]){
-                        if(mat[0][0]==1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[2][1]==2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }else if(row==2 && col==2){
-            if(mat[2][0]===mat[2][1]===mat[2][2]
-                || mat[0][0]===mat[1][1]===mat[2][2]
-                    || mat[0][2]===mat[1][2]===mat[2][2]){
-                        if(mat[0][0]===1){
-                            notor.innerHTML="X wins";
-                            console.log("cell: "+row+" "+col);
-                        }else if(mat[2][2]===2){
-                            notor.innerHTML="O wins";
-                            console.log("cell: "+row+" "+col);
-                        }
-            }
-        }
+        
+        
     }
     else{
         alert("You can't replace the filled boxes!");
