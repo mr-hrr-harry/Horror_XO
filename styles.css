@@ -36,6 +36,12 @@ body > *{
     font-size: 32px;
 }
 
+marquee{
+    font-size: 15px;
+    display: inline-block;
+    color: #000;
+}
+
 /* Main */
 #main{
     padding: 50px;
@@ -158,9 +164,34 @@ body > *{
 
 /* Footer */
 #ftr{
+    padding:30px;
+
     border-radius: 20px;
+    font-size: 20px;
 }
 
+.social_media a{
+    margin: 50px 40px 10px 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+
+    color: #CA2A2A;
+    border: 3px solid #CA2A2A;
+    border-radius: 50%;
+    background: transparent;
+
+    text-decoration: none;
+    font-size: 25px;
+}
+.social_media a:hover{
+    color: #FFFF00;
+    border: 3px solid #FFFF00;
+    background: #CA2A2A;
+    box-shadow: 0 0 20px #FFFF00;
+}
 
 
 
