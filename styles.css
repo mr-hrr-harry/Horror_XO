@@ -146,6 +146,15 @@ body > *{
     rotate: 90deg;
 }
 
+#gifImg{
+    height: 500px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    z-index: 1000;
+    display: inline-block;
+}
 
 /* Footer */
 #ftr{

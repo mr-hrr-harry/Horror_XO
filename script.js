@@ -117,6 +117,15 @@ function xORo(event){
 }
 
 function setFinalRes(){
+
+    const winGif = document.createElement("IMG");
+    winGif.id ="gifImg";
+    winGif.setAttribute("src","winner_popper.gif");
+    document.getElementById("main").prepend(winGif);
+
+    new Audio("winning_trumpets.mpeg").play();
+    new Audio("winning_applasue.mpeg").play();
+
     notor.onclick = reload;
     notor.setAttribute("style",
         "font: 800;"+
@@ -127,9 +136,7 @@ function setFinalRes(){
         "animation-name: zoomIn"+
         "animation-duration: 10s"+
         "animation-iteration-count: infinite");
-
-    new Audio("winning_trumpets.mpeg").play();
-    new Audio("winning_applasue.mpeg").play();
+        
     win=1;
     return;
 }
