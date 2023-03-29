@@ -138,6 +138,10 @@ function setFinalRes(){
         "animation-iteration-count: infinite");
         
     win=1;
+
+    setTimeout(function(){
+        winGif.remove();
+    }, 10000);
     return;
 }
  
