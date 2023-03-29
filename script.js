@@ -32,6 +32,7 @@ let mat=[["","",""],
 var flag=0, ctr=0, win=0;
 const notor = document.getElementById("notator");
 const alertSound = new Audio("warning_sound.mpeg");
+const crrtClick = new Audio("crrt_fill_click.mpeg");
 
 function xORo(event){
 
@@ -49,6 +50,7 @@ function xORo(event){
 
 
     if(cell.innerHTML==""){
+        crrtClick.play();
         if(flag==0){
             flag=1;
             ctr++;
