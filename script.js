@@ -139,9 +139,9 @@ function setFinalRes(){
         
     win=1;
 
-    // setTimeout(function(){
-    //     winGif.remove();
-    // }, 10000);
-    // return;
+    setTimeout(function(){
+        winGif.remove();
+    }, 10000);
+    return;
 }
  
