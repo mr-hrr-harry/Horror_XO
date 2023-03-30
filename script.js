@@ -121,7 +121,7 @@ function setFinalRes(){
     const winGif = document.createElement("IMG");
     winGif.id ="gifImg";
     winGif.setAttribute("src","winner_popper.gif");
-    document.getElementById("main").prepend(winGif);
+    document.getElementById("tableSec").prepend(winGif);
 
     new Audio("winning_trumpets.mp3").play();
     new Audio("winning_applasue.mp3").play();
@@ -139,9 +139,9 @@ function setFinalRes(){
         
     win=1;
 
-    setTimeout(function(){
-        winGif.remove();
-    }, 10000);
-    return;
+    // setTimeout(function(){
+    //     winGif.remove();
+    // }, 10000);
+    // return;
 }
  
