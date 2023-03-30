@@ -1,6 +1,6 @@
 let mssg;
 let tblSec = document.getElementById("tableSec");
-const buttonClick = new Audio("button_click_pop.mpeg");
+const buttonClick = new Audio("button_click_pop.mp3");
 
 function start(){
 
@@ -31,8 +31,8 @@ let mat=[["","",""],
 
 var flag=0, ctr=0, win=0;
 const notor = document.getElementById("notator");
-const alertSound = new Audio("warning_sound.mpeg");
-const crrtClick = new Audio("crrt_fill_click.mpeg");
+const alertSound = new Audio("warning_sound.mp3");
+const crrtClick = new Audio("crrt_fill_click.mp3");
 
 function xORo(event){
 
@@ -108,7 +108,7 @@ function xORo(event){
 
     if(ctr==9){
         notor.innerHTML="🤧 Oops Match Draw! Start Over";
-        new Audio("failure_sound.mpeg").play() ; 
+        new Audio("failure_sound.mp3").play() ; 
 
         notor.onclick = reload;
     }
@@ -123,8 +123,8 @@ function setFinalRes(){
     winGif.setAttribute("src","winner_popper.gif");
     document.getElementById("main").prepend(winGif);
 
-    new Audio("winning_trumpets.mpeg").play();
-    new Audio("winning_applasue.mpeg").play();
+    new Audio("winning_trumpets.mp3").play();
+    new Audio("winning_applasue.mp3").play();
 
     notor.onclick = reload;
     notor.setAttribute("style",
