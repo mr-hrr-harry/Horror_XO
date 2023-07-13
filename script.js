@@ -16,6 +16,7 @@ function start(){
 
     notor.removeAttribute("onclick");
     return;
+    
 }
 
 
