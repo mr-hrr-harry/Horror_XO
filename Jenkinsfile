@@ -13,11 +13,6 @@ pipeline{
                 println "Current Working Directory: ${pwd()}"
 
                 sh "ls"
-
-                writeFile file: 'new_file.txt', text: fileContent
-                echo "New file 'new_file.txt' created with content:"
-                sh "echo \"Hey Harry\" > new_file.txt"
-                sh "cat new_file.txt"
             }
         }
         stage("deploy"){
