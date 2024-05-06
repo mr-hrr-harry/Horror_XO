@@ -12,10 +12,11 @@ pipeline{
                 println "Current Date: ${new Date()}"
                 println "Current Working Directory: ${pwd()}"
 
-                println "Script: ${ls()}"
+                sh "ls"
 
                 writeFile file: 'new_file.txt', text: fileContent
                 echo "New file 'new_file.txt' created with content:"
+                sh "echo \"Hey Harry\" > new_file.txt"
                 sh "cat new_file.txt"
             }
         }
