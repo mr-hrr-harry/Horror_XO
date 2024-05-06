@@ -10,7 +10,7 @@ pipeline{
             steps{
                 echo 'testing'
                 println "Current Date: ${new Date()}"
-                println "Current Working Directory: ${new File(".").canonicalPath}"
+                println "Current Working Directory: ${pwd()}"
             }
         }
         stage("deploy"){
