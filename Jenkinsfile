@@ -14,7 +14,9 @@ pipeline{
                 
                 def files = sh(script: 'ls', returnStdout: true).trim().split('\n')
                     println "Files in the directory:"
-                    files.each { println it }
+                    files.each { fileName ->
+                        println fileName
+                    }
 
                  writeFile file: 'new_file.txt', text: fileContent
                     echo "New file 'new_file.txt' created with content:"
